@@ -1,7 +1,7 @@
 //JS
 const FirstComponents = () => {
   return (
-    <div> <p>FirstComponents</p>
+    <div> <p>MYFirstComponents</p>
         <h1>Meu Primeiro Componente</h1>
         <p>OLAAAAA</p>
     </div>

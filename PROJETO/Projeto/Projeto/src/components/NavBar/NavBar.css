@@ -1,0 +1,47 @@
+/*  lado a lado */
+.nav-list {
+  display: flex;     
+  gap: 30px;          
+  list-style: none;  
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Links */
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* L animada */
+.nav-list li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #e50914;
+  transition: 0.3s;
+}
+
+.nav-list li a:hover::after {
+  width: 100%;
+}
+
+.nav-list li a:hover {
+  color: #e50914;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column; /* pra MOBILE */
+    gap: 15px;
+    align-items: center;
+  }
+}
