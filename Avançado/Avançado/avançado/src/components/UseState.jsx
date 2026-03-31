@@ -8,12 +8,14 @@ const UseState = () => {
   return (
     <div>
         <br></br>
-      <h2>Gerenciando Dados com useState</h2>
+      <h2>Gerenciando Dados com UseState</h2>
 
       <button onClick={() => (nome = "Maria")}>
         Forma errada
+        
      
       </button>
+
     <p>Nome: {nome}</p>
 
       <br></br>

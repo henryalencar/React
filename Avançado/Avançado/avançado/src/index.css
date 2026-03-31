@@ -1,5 +1,5 @@
 :root {
-  --text: #6b6375;
+  --text: #0c021a;
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
@@ -24,6 +24,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1eeee96;
 
   @media (max-width: 1024px) {
     font-size: 16px;
@@ -51,7 +52,7 @@
 }
  /*CSS */
 .card {
-  background-color: rgb(73, 162, 168);
+  background-color: rgb(13, 148, 158);
   justify-content: center;
   font-family: Arial, sans-serif;
 

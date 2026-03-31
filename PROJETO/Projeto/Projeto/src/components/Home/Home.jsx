@@ -204,7 +204,7 @@ const Home = () => {
   <img src="/suvExec2.jpg" alt="Rols Royce" />
   <div className="card-content">
     <h3>Luxo Vintage</h3>
-    <p>R$ 1.800.000</p>
+    <p>$ 1.800.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -213,7 +213,7 @@ const Home = () => {
   <img src="/suvExec3.jpg" alt="Rols Royce" />
   <div className="card-content">
     <h3>Luxo Vintage</h3>
-    <p>R$ 1.200.000</p>
+    <p>$ 1.200.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -222,7 +222,7 @@ const Home = () => {
   <img src="/suvExec4.jpg" alt="Rols Royce" />
   <div className="card-content">
     <h3>Luxo Vintage</h3>
-    <p>R$ 1.800.000</p>
+    <p>$ 1.800.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -231,7 +231,7 @@ const Home = () => {
   <img src="/suvExec5.jpg" alt="Rols Royce" />
   <div className="card-content">
     <h3>Luxo Vintage</h3>
-    <p>R$ 1.200.000</p>
+    <p>$ 1.200.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -252,7 +252,7 @@ const Home = () => {
   <img src="/caminhonete2.jpg" alt="Rols Royce" />
   <div className="card-content">
     <h3> Caminhonete Luxo Vintage</h3>
-    <p>R$ 2.500.000</p>
+    <p>$ 2.000.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -261,7 +261,7 @@ const Home = () => {
   <img src="/caminhonete3.jpg" alt="Rols Royce" />
   <div className="card-content">
     <h3>Caminhonete Toyota</h3>
-    <p>R$ 2.500.000</p>
+    <p>$ 900.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -270,7 +270,7 @@ const Home = () => {
   <img src="/caminhonete4.jpg" alt="Rols Royce" />
   <div className="card-content">
     <h3>Caminhonete Ford</h3>
-    <p>R$ 2.500.000</p>
+    <p>$ 900.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -279,7 +279,7 @@ const Home = () => {
   <img src="/caminhonete5.jpg" alt="Rols Royce" />
   <div className="card-content">
     <h3>Caminhonete Toyota</h3>
-    <p>R$ 2.500.000</p>
+    <p>$ 800.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -288,7 +288,7 @@ const Home = () => {
   <img src="/caminhonete6.jpg" alt="caminhonete" />
   <div className="card-content">
     <h3>Caminhonete Chevrolet</h3>
-    <p>R$ 900.000</p>
+    <p>$ 900.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
@@ -297,7 +297,7 @@ const Home = () => {
   <img src="/caminhonete7.jpg" alt="GMC" />
   <div className="card-content">
     <h3>Caminhonete GMC</h3>
-    <p>R$ 2.000.000</p>
+    <p>$ 2.000.000</p>
     <button>Ver detalhes</button>
   </div>
 </div>
