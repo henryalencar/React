@@ -1,6 +1,52 @@
 import './Home.css'
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Card from "../Card/Card";
 
 const Home = () => {
+  const location = useLocation();
+
+  //  Scroll suave ao mudar hash
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  //  DADOS DOS VEÍCULOS EM CARDS (USANDO MAP E PROPS) OLHAR NO Card.jsx
+const veiculos = [
+  { id: 1, nome: "Mercedes AMG SUV", preco: "$ 350.000", imagem: "/mercedesP.jpg" },
+  { id: 2, nome: "Mercedes Sport", preco: "$ 320.000", imagem: "/mercedes2.jpg" },
+  { id: 3, nome: "Mercedes Black", preco: "$ 400.000", imagem: "/mercedes5.jpg" },
+  { id: 4, nome: "Mercedes Luxo", preco: "$ 450.000", imagem: "/mercedesLuxo.jpg" },
+  { id: 5, nome: "Mustang", preco: "$ 450.000", imagem: "/mustang.jpg" },
+  { id: 6, nome: "McLaren", preco: "$ 900.000", imagem: "/mclaren.jpg" },
+
+  { id: 7, nome: "Yamaha R1", preco: "$ 110.000", imagem: "/moto1.jpg" },
+  { id: 8, nome: "Honda CBR", preco: "$ 75.000", imagem: "/moto2.jpg" },
+  { id: 9, nome: "Kawasaki Ninja", preco: "$ 80.000", imagem: "/moto3.jpg" },
+  { id: 10, nome: "BMW S1000RR", preco: "$ 110.000", imagem: "/moto5.jpg" },
+
+  { id: 11, nome: "Harley Davidson Classic", preco: "$ 95.000", imagem: "/motoVintage1.jpg" },
+  { id: 12, nome: "Royal Enfield Bullet", preco: "$ 70.000", imagem: "/motoVintage2.jpg" },
+
+  { id: 13, nome: "Corvette Clássico", preco: "$ 750.000", imagem: "/carroVintage1.jpg" },
+  { id: 14, nome: "Luxo Vintage", preco: "$ 1.200.000", imagem: "/carroVintage2.jpg" },
+
+  { id: 15, nome: "SUV Mercedes", preco: "$ 1.300.000", imagem: "/suvMercedes.jpg" },
+  { id: 16, nome: "Lamborghini SUV", preco: "$ 1.590.000", imagem: "/lamboSuv.jpg" },
+  { id: 17, nome: "Rolls Royce", preco: "$ 2.500.000", imagem: "/suvExec.jpg" },
+
+  { id: 18, nome: "Caminhonete Ford", preco: "$ 2.500.000", imagem: "/caminhonete1.jpg" },
+  { id: 19, nome: "Caminhonete Luxo", preco: "$ 2.000.000", imagem: "/caminhonete2.jpg" },
+  { id: 20, nome: "Caminhonete Toyota", preco: "$ 900.000", imagem: "/caminhonete3.jpg" },
+  { id: 21, nome: "Caminhonete Chevrolet", preco: "$ 900.000", imagem: "/caminhonete6.jpg" },
+];
+
+
   return (
     <main>
       
@@ -42,294 +88,53 @@ const Home = () => {
       <section id="cards" className="cards">
   <h2 className="section-title">Nossos Veículos</h2>
 
+  {/* CARDS */}
   <div className="cards-container">
-
-    {/* CARROS */}
-    <div className="card">
-      <img src="/mercedesP.jpg" alt="Mercedes AMG SUV" />
-      <div className="card-content">
-        <h3>Mercedes AMG SUV</h3>
-        <p>$ 350.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/mercedes2.jpg" alt="Mercedes Sport" />
-      <div className="card-content">
-        <h3>Mercedes Sport</h3>
-        <p>$ 320.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/mercedes5.jpg" alt="Mercedes Black" />
-      <div className="card-content">
-        <h3>Mercedes Black</h3>
-        <p>$ 400.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/mercedesLuxo.jpg" alt="Mercedes Luxo" />
-      <div className="card-content">
-        <h3>Mercedes Luxo</h3>
-        <p>$ 450.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/mustang.jpg" alt="Mustang" />
-      <div className="card-content">
-        <h3>Mustang</h3>
-        <p>$ 450.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/mclaren.jpg" alt="McLaren" />
-      <div className="card-content">
-        <h3>McLaren</h3>
-        <p>$ 900.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    {/* MOTOSs */}
-    <div className="card">
-      <img src="/moto1.jpg" alt="Yamaha R1" />
-      <div className="card-content">
-        <h3>Yamaha R1</h3>
-        <p>$ 110.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/moto2.jpg" alt="Honda CBR" />
-      <div className="card-content">
-        <h3>Honda CBR</h3>
-        <p>$ 75.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/moto3.jpg" alt="Kawasaki Ninja" />
-      <div className="card-content">
-        <h3>Kawasaki Ninja</h3>
-        <p>$ 80.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/moto5.jpg" alt="BMW S1000RR" />
-      <div className="card-content">
-        <h3>BMW S1000RR</h3>
-        <p>$ 110.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    {/* MOTOS VINTAGE */}
-    <div className="card">
-      <img src="/motoVintage1.jpg" alt="Harley Davidson Classic" />
-      <div className="card-content">
-        <h3>Harley Davidson Classic</h3>
-        <p>$ 95.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-
-    <div className="card">
-      <img src="/motoVintage2.jpg" alt="Royal Enfield Bullet" />
-      <div className="card-content">
-        <h3>Royal Enfield Bullet</h3>
-        <p>$ 70.000</p>
-        <button>Ver detalhes</button>
-      </div>
-    </div>
-    {/* CARROS VINTAGE */}
-<div className="card">
-  <img src="/carroVintage1.jpg" alt="Chevrolet Corvette Clássico" />
-  <div className="card-content">
-    <h3>Corvette Clássico</h3>
-    <p>$ 750.000</p>
-    <button>Ver detalhes</button>
+    {veiculos.map((v) => (
+      <Card
+        key={v.id}
+        nome={v.nome}
+        preco={v.preco}
+        imagem={v.imagem}
+      />
+    ))}
   </div>
-</div>
 
-<div className="card">
-  <img src="/carroVintage2.jpg" alt="Carro Luxo Vintage" />
-  <div className="card-content">
-    <h3>Luxo Vintage</h3>
-    <p>$ 1.200.000</p>
-    <button>Ver detalhes</button>
+  {/* BOTÕES */}
+  <div className="social-float">
+    <a 
+      href="https://wa.me/5511999999999" 
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn whatsapp"
+    >
+      <img src="/watsNV1.png" alt="WhatsApp" />
+    </a>
+
+    <a 
+      href="https://instagram.com/seuusuario" 
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn instagram"
+    >
+      <img src="/instaNV1.png" alt="Instagram" />
+    </a>
   </div>
-</div>
-
- {/* CARROS LUXO */}
-<div className="card">
-  <img src="/suvMercedes.jpg" alt="Carro Luxo Vintage" />
-  <div className="card-content">
-    <h3>Luxo Vintage</h3>
-    <p>$ 1.300.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-<div className="card">
-  <img src="/lamboSuv.jpg" alt="Carro Luxo Vintage" />
-  <div className="card-content">
-    <h3>Luxo Vintage</h3>
-    <p>R$ 1.590.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/suvExec.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Luxo Vintage</h3>
-    <p>R$ 2.500.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/suvExec2.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Luxo Vintage</h3>
-    <p>$ 1.800.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/suvExec3.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Luxo Vintage</h3>
-    <p>$ 1.200.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/suvExec4.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Luxo Vintage</h3>
-    <p>$ 1.800.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/suvExec5.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Luxo Vintage</h3>
-    <p>$ 1.200.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
- {/* CARROS CAMINHONETE */}
+</section>
 
 
-<div className="card">
-  <img src="/caminhonete1.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Caminhonete Ford</h3>
-    <p>R$ 2.500.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
+{/* CONTATO */}
+<section id="contato" className="contato">
+  <div className="contato-container">
+    <h2>Fale Conosco</h2>
+    <p>Entre em contato com a HenryCar para dúvidas, sugestões ou orçamentos.</p>
 
-<div className="card">
-  <img src="/caminhonete2.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3> Caminhonete Luxo Vintage</h3>
-    <p>$ 2.000.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/caminhonete3.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Caminhonete Toyota</h3>
-    <p>$ 900.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/caminhonete4.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Caminhonete Ford</h3>
-    <p>$ 900.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/caminhonete5.jpg" alt="Rols Royce" />
-  <div className="card-content">
-    <h3>Caminhonete Toyota</h3>
-    <p>$ 800.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/caminhonete6.jpg" alt="caminhonete" />
-  <div className="card-content">
-    <h3>Caminhonete Chevrolet</h3>
-    <p>$ 900.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
-<div className="card">
-  <img src="/caminhonete7.jpg" alt="GMC" />
-  <div className="card-content">
-    <h3>Caminhonete GMC</h3>
-    <p>$ 2.000.000</p>
-    <button>Ver detalhes</button>
-  </div>
-</div>
-
- {/* BOTÕES  */}
-      <div className="social-float">
-
-  {/* WHATS */}
-  <a 
-    href="https://wa.me/5511999999999" 
-    target="_blank"
-    rel="noopener noreferrer"
-    className="btn whatsapp"
-  >
-    <img src="/watsNV1.png" alt="WhatsApp" />
-  </a>
-
-  {/* INSTAGRAM */}
-  <a 
-    href="https://instagram.com/seuusuario" 
-    target="_blank"
-    rel="noopener noreferrer"
-    className="btn instagram"
-  >
-    <img src="/instaNV1.png" alt="Instagram" />
-  </a>
-
-
-
-      </div>
-
-
+    <form className="form-contato">
+      <input type="text" placeholder="Nome" />
+      <input type="email" placeholder="Email" />
+      <textarea placeholder="Mensagem"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </div>
 </section>
     </main>

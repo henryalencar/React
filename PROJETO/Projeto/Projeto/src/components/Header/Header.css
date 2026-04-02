@@ -9,7 +9,7 @@
   justify-content: space-between; /* logo à esquerda, nav à direita */
   padding: 15px 30px;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(2, 0, 0, 0.75);
   backdrop-filter: blur(10px);
   color: #ffffffc4;
   z-index: 1000;
